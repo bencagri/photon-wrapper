@@ -1,5 +1,5 @@
 
-<p align="center"><img src="https://raw.githubusercontent.com/bencagri/photon-wrapper/master/examples/images/main"></p>
+<p align="center"><img src="https://raw.githubusercontent.com/bencagri/photon-wrapper/master/examples/images/main.jpg"></p>
 
 
 ## JETPACK PHOTON WRAPPER
