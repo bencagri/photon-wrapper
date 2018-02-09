@@ -77,6 +77,7 @@ class Processor
      */
     public function __construct($imageUrl, $query)
     {
+        error_reporting(0); // because of $GLOBALS
 
         $this->image_url = $imageUrl;
         $this->query = $query;
@@ -199,7 +200,7 @@ class Processor
 
         if ( PHOTON__ALLOW_QUERY_STRINGS && isset( $parsed['query'] ) ) {
             $host = strtolower( $parsed['host'] );
-            if ( array_key_exists( $host, $GLOBALS['origin_domain_exceptions'] ) ) {
+            if ( $GLOBALS['origin_domain_exceptions'] && array_key_exists( $host, $GLOBALS['origin_domain_exceptions'] ) ) {
                 if ( $GLOBALS['origin_domain_exceptions'][$host] ) {
                     $url .= '?' . $parsed['query'];
                 }
