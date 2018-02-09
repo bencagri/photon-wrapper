@@ -1,0 +1,17 @@
+{
+    "name": "bencagri/photon",
+    "type": "dev",
+    "authors": [
+        {
+            "name": "bencagri",
+            "email": "selam@bencagri.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": { "Photon\\Wrapper\\": "src/" }
+    },
+    "minimum-stability": "dev",
+    "require-dev": {
+        "symfony/var-dumper": "^4.1@dev"
+    }
+}
