@@ -189,8 +189,6 @@ class Processor
         $required = array( 'scheme', 'host', 'path' );
 
         if ( ! $parsed || count( array_intersect_key( array_flip( $required ), $parsed ) ) !== count( $required ) ) {
-            dump(11);
-
             return false;
         }
 
@@ -215,26 +213,20 @@ class Processor
 
         // https://bugs.php.net/bug.php?id=64948
         if ( ! filter_var( str_replace( '_', '-', $url ), FILTER_VALIDATE_URL, FILTER_FLAG_SCHEME_REQUIRED | FILTER_FLAG_PATH_REQUIRED ) ) {
-            dump(1);
             return false;
         }
 
         $allowed_ip_types = array( 'flags' => FILTER_FLAG_IPV4, );
 
         if ( ! filter_var( $ip, FILTER_VALIDATE_IP, $allowed_ip_types ) ) {
-            dump(2);
-
             return false;
         }
 
         if ( ! filter_var( $ip, FILTER_VALIDATE_IP, FILTER_FLAG_NO_PRIV_RANGE | FILTER_FLAG_NO_RES_RANGE ) && ! apply_filters( 'allow_private_ips', false ) ) {
-            dump(3);
-
             return false;
         }
 
         if ( isset( $parsed['port'] ) && $parsed['port'] !== $port ) {
-            dump(4);
             return false;
         }
 
