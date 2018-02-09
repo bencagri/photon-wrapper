@@ -61,6 +61,6 @@ $effects = new Effects(
 Full [documentation](examples/readme.md) of all effects.
 
 
-###Licence
-* The Photon Wrapper is open-sourced software licensed under the MIT license.
+### Licence
+* The [Photon Wrapper](LICENCE) is open-sourced software licensed under the MIT license.
 * The [Photon](https://code.trac.wordpress.org/browser/photon/LICENSE) is open-sourced software licenced under GNU GENERaL PUBLIC LICENCE
