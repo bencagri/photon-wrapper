@@ -139,3 +139,73 @@ new Filter($filterName);
 
 > Image Source
 > https://www.pexels.com/photo/beautifully-served-table-for-dinner-6269/
+
+### Brightness
+
+Adjust the brightness of an image. 
+Valid values are -255 through 255 where -255 is black and 255 is white. 
+Higher is brighter. The default is zero. `-40` will darken an image by 40 and `80` will brighten an image by 80.
+
+```php
+new Brightness(-50);
+```
+
+### Contrast
+Adjust the contrast contrast of an image. Valid values are -100 through 100. 
+The default is zero. `-50` will decrease contrast by 50 and `50` will increase contrast by 50.
+
+```php
+new Contrast(20);
+
+```
+
+### Colorize
+Add color hues to an image with colorizeby passing a comma separated list of red,green,blue (RGB) values such as 255,0,0 (red), 0,255,0 (green), 0,0,255 (blue).
+
+```php
+new Colorize(0,0,100);
+```
+
+<p>
+    <img src="images/bird-original.jpeg" alt>
+    <em>original</em>
+</p>
+
+<p>
+    <img src="images/bird-colorize-0,0,100.jpeg" alt>
+    <em>0,0,100</em>
+</p>
+<p>
+    <img src="images/bird-colorize-0,100,0.jpeg" alt>
+    <em>0,100,0</em>
+</p>
+<p>
+    <img src="images/bird-colorize-100,0,0.jpeg" alt>
+    <em>100,0,0</em>
+</p>
+
+> Image Source
+> https://www.pexels.com/photo/bird-animal-white-pigeon-75973/
+
+### Smooth
+The smooth parameter can be used to smooth out the image.
+
+```php
+new Smooth(1);
+```
+
+### Zoom
+Use zoom to size images for high pixel ratio devices and browsers when zoomed. Not available to use with crop. Zoom is intended for use by scripts such as devicepx.js which automatically set the zoom level. Valid zoom levels are 1, 1.5, 2-10.
+
+```php
+new Zoom(2)
+```
+
+### Quality
+Use the quality parameter to manage the quality output of JPEG and PNG images. Valid settings are between the values between 20 and 100. For JPEGs a setting of 100 will output the image at the original unaltered quality setting. However when specifying a quality of 100 for PNGs, the image is compressed using lossless compression and produces an image with identical quality as the original. Note that if the requesting web browser supports the WebP image format, then PNG and JPEG images will automatically be converted to the WebP image format by the server. When specifying 100 as the quality in this instance, a lossless compressed image will be produced, which in some instances may result in a file larger than the original.
+
+Note that the default quality setting for JPEGs is 89%, PNGs 80%, and WebP images is 80%.
+
+```php
+new Quality(88);
+```
