@@ -58,7 +58,7 @@ $effects = new Effects(
 );
 ```
 
-Full documentation of all effects.
+Full [documentation](examples/readme.md) of all effects.
 
 
 ###Licence

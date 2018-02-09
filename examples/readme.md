@@ -10,10 +10,10 @@ new Width(300);
 new Width('20%');
 ```
 
-Original image:
+Original image:<br>
 <img src="images/apple-original.jpeg" />
 
-After
+After<br>
 <img src="images/apple-width-300.jpeg" />
 
 
@@ -35,7 +35,7 @@ new Height('20%');
 Crop an image by percentages x-offset,y-offset,width,height (x,y,w,h). 
 Percentages are used so that you don’t need to recalculate the cropping when transforming the image in other ways such as resizing it.
 
-Original image:
+Original image:<br>
 <img src="images/railway-original.jpeg" />
 
 ```php
@@ -45,7 +45,7 @@ new Crop('250px','250px','700px','600px');
 250px,250px,700px,700px takes a 700px by 700px rectangle from the source image starting at 250px offset from the left and 250px offset from the top.
 
 
-After:
+After:<br>
 <img src="images/railway-crop.jpeg" />
 
 ```php
@@ -85,11 +85,11 @@ Add black letterboxing effect to images, by scaling them to width, height while 
 new LetterBox(700,600);
 
 ```
-Original image:
-<img src="images/railway-original.jpeg" />
+Original image: <br>
+<img src="images/sea-original.jpeg" />
 
-After:
-<img src="images/railway-original.jpeg" />
+After:<br>
+<img src="images/sea-letterbox.jpeg" />
 
 > Image Source
 > https://www.pexels.com/photo/beach-beautiful-bridge-carribean-449627/
@@ -110,29 +110,29 @@ new Filter($filterName);
 ```
 
 <p>
-    <img src="images/railway-original.jpeg" alt>
+    <img src="images/table-original.jpeg" alt>
     <em>original</em>
 </p>
 
 <p>
-    <img src="images/railway-negate.jpeg" alt>
+    <img src="images/table-negate.jpeg" alt>
     <em>negate</em>
 </p>
 
 <p>
-    <img src="images/railway-grayscale.jpeg" alt>
+    <img src="images/table-grayscale.jpeg" alt>
     <em>grayscale</em>
 </p>
 <p>
-    <img src="images/railway-sepia.jpeg" alt>
+    <img src="images/table-sepia.jpeg" alt>
     <em>sepia</em>
 </p>
 <p>
-    <img src="images/railway-edgedetect.jpeg" alt>
+    <img src="images/table-edgedetect.jpeg" alt>
     <em>edgedetect</em>
 </p>
 <p>
-    <img src="images/railway-emboss.jpeg" alt>
+    <img src="images/table-emboss.jpeg" alt>
     <em>emboss</em>
 </p>
 
